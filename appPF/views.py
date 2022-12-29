@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from .models import *
 from django.http import HttpResponse
-from appPF.forms import EscuelaForm, busquedaCompañeroForm
+from appPF.forms import EscuelaForm
 
 
 
@@ -25,11 +25,23 @@ def escuelaForm(request):
         atleta= EscuelaForm()
         return render(request, "appPF/escuela.html", {"form":atleta})
 
-def busquedaCompañero(request):
-   return render(request, "appPF/busquedaCompañero.html")
+
+
+
+
+
+
+
+
+def busquedaCompanero(request):
+     return render(request, "appPF/busquedaCompanero.html")
 
 
 def buscar(request):
-    if "escuelaForm" in request.GET:
-      
-        return HttpResponse(f"eadsadsa{request.GET[escuelaForm]}")
+    profesor=request.GET["profesor"]
+    if profesor!="":
+        escuelas=Escuela.objects.filter(profesor=profesor)
+        return render(request, "appPF/resultadoBusqueda.html", {"escuelas":escuelas})
+        
+    else:
+        return render(request, "appPF/busquedaCompanero.html", {"mensaje":"Try Again "})

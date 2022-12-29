@@ -20,8 +20,13 @@ class nivel(models.Model):
     def __str__(self):
         return self.cinturon + self.edad + self.edad
 
-class modalidad(models.Model):
-    modalidad=models.CharField(max_length=5)
 
+
+class BusquedaCompanero(models.Model):
+    busqueda=models.CharField( max_length=50)
+     
+     
+     
+     
     def __str__(self):
-        return "usted eligio" + self.modalidad
+        return self.busqueda

@@ -1,0 +1,27 @@
+{% extends "appPF/padre.html" %}
+
+{% block titulo %}
+
+
+{% endblock %}
+
+{% block relativo %}
+
+    
+    <h1>Buscador de llaves </h1>
+    <h1>{{ mensaje }} </h1>
+    
+    <form action="{% url 'buscar' %}" method="GET">  {% csrf_token %}
+        <input type="text" name="profesor" id="profesor">
+
+    
+ 
+        <input type="submit" value="Buscar">
+ 
+ 
+ 
+    </form>
+
+
+{% endblock %}
+

@@ -1,0 +1,18 @@
+{% extends "appPF/padre.html" %}
+
+
+{% block titulo %}
+ <h1>Listado de atletas </h1>
+{% endblock %}
+    
+
+{% block relativo %}
+    
+    {% for escuela in escuelas %}
+
+    <h3>{{ escuela.profesor }} --- {{ escuela.escuela }}</escuela></h3>
+
+    {% endfor %}
+{% endblock %}
+
+

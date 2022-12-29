@@ -6,5 +6,3 @@ class EscuelaForm(forms.Form):
     escuela=forms.CharField(label="Escuela: ", max_length=10)
 
 
-class busquedaCompañeroForm(forms.Form):
-    busqueda=forms.CharField(label="Buscar: ", max_length=50)
