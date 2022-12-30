@@ -8,11 +8,9 @@
 
 {% block relativo %}
     
-    {% for escuela in escuelas %}
+{% for atleta in atletas %}
 
-    <h3>{{ escuela.profesor }} --- {{ escuela.escuela }}</escuela></h3>
+    <h3>{{ atleta.nombre }} --- {{ atleta.apellido }} --- {{ atleta.peso }}</escuela></h3>
 
     {% endfor %}
 {% endblock %}
-
-

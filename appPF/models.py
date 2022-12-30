@@ -6,19 +6,21 @@ from django.db import models
 class Escuela(models.Model):
     profesor=models.CharField(max_length=60)
     escuela=models.CharField(max_length=20)
-
+    
 
     def __str__(self):
-        return self.profesor + self.escuela
+        return self.profesor + self.escuela 
 
 
-class nivel(models.Model):
+class Atleta(models.Model):
+    nombre=models.CharField(max_length=20)
+    apellido=models.CharField(max_length=20)
     cinturon=models.CharField(max_length=12)
-    edad=models.IntegerField
-    peso=models.IntegerField
+    edad=models.IntegerField()
+    peso=models.IntegerField()
 
     def __str__(self):
-        return self.cinturon + self.edad + self.edad
+        return self.nombre + self.apellido + self.cinturon , self.edad , self.peso
 
 
 

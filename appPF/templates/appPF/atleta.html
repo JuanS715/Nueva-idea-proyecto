@@ -1,0 +1,25 @@
+{% extends "appPF/padre.html" %}
+
+
+{% block titulo %}
+<h1>Formulario de inscripcion </h1>
+{% endblock %}
+
+
+
+
+
+
+
+{%block relativo %}
+<form action="{% url 'atleta' %}" method="POST">  {% csrf_token %}
+
+    <table>
+        {{ form1.as_table }}
+    </table>
+      
+    <input type="submit" value="Inscribirse ">
+    
+    
+       
+{% endblock %}

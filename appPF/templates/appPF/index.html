@@ -3,12 +3,26 @@
 
 {% block titulo %}
 
-<h1>Felicitaciones </h1>
+
 
 {% endblock %}
 
 {% block relativo %}
 <h1>{{ mensaje }} </h1>
+<form action="{% url 'atleta' %}" method="GET">  {% csrf_token %}
+    
+     
+
+
+    <input type="submit" value="Go to inscripcion">
+
+
+
+</form>
+
 {% endblock %} 
+
+
+
 
 
