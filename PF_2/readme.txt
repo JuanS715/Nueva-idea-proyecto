@@ -1,0 +1,3 @@
+''' Este proyecto esta ideado para tener una base de dato de competidores en un torneo de artes marciales en este caso,
+el programa va a empezar en appPF/ donde se van a ingresar los datos de tu profesor y la escuela a la que pertences te va a redirecionar a una pagina donde llenar mas datos, luego te va a redirecionar
+ a otro html que te permite buscar a travez de tu peso tu categoria donde estarias compitiendo '''
